@@ -27,3 +27,15 @@ print (peliculas[0:2])
 """Se pueden modificar lo de dentro de las listas, mediante la siguiente sintaxis"""
 peliculas[1] = "El señor de la noche"
 print(peliculas)
+
+# Añadir elementos a una lista
+cantantes = ["Nissa", "BadBunny"]
+cantantes.append("Duko")
+print (cantantes)
+
+"""
+Recorrer lista. Para iterar/recorrer una lista mediante el for, es lo mas util.
+Me salen estos numeros pero porque he pueso un rango antes
+"""
+for peliculas in peliculas:
+    print (pelicula)
