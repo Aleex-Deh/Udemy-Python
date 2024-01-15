@@ -1,26 +1,21 @@
 """
 EJERCICIO 1
-Hacer un programa que tenga una lista de 8 numeros enteros y haga lo siguientes :
-- Recorrer la lista y mostrarla
-- Hacer funcion que recorra listas de numeros y devuelvo un string
-- Ordanarla y mostrarla
-- Mostrar su longitud
-- Buscar algun elemento (que el ususario pida haya pedido por teclado)"""
-
-numeros = [21,45,63,17,95,1,51]
+Programa que añada valores una lista mientras que su longitud sea menor a 120, y luego mostrar la lista.
+Hacer con while y tmbien con el for"""
 
 
-def mostrar_lista(lista):
-    resultado = ""
-    
-    for elemento in lista:
-        resultado += "Elemento " + str(elemento)
-        resultado+= "\n"
-    return resultado
+#Ejercicio con FOR
+
+lista = []
+for contador in range(0,120):
+    lista.append(f"{contador}")
+    print(lista[contador])
 
 
-
-for numero in numeros:
-    print(numero)
-    
-print(mostrar_lista(numeros))
+#Ejercicio con WHILE
+contador1 = 0
+lista1 = []
+while contador1 <= 120:
+    lista1.append(contador1)
+    print(lista1[contador1])
+    contador1 = contador1 + 1
