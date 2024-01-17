@@ -56,3 +56,7 @@ coche.acelerar()
 coche.acelerar()
 coche.acelerar()
 print(f"Velocidad nueva es de {coche.velocidad}")
+
+#Crear mas objetos.     Simplemente enumerando o cambiando la variable que sea igual a la clase
+coche2 = Coche()
+print(coche2.getColor())
