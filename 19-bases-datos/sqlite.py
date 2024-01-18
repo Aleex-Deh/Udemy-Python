@@ -6,7 +6,7 @@ Es una sistema gestor de bases de datos ligero que vienen integrado dentro del l
 import sqlite3
 
 # Abrimos conexion. (se crea nuestra base de datos)
-conexion = sqlite3.connect("pruebas.db")
+conexion = sqlite3.connect("./19-bases-datos/pruebas.db")
 
 # Creamos el cursor.   El cursor es el que nos permite ejecutar las cosultas de las bases de datps
 cursor = conexion.cursor()
