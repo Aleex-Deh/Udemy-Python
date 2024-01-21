@@ -20,5 +20,6 @@ hazEl = acciones.Acciones()
 
 if accion == "registro":
     hazEl.registro()
+    
 elif accion == "login":
     hazEl.login()
