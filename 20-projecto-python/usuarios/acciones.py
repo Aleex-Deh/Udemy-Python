@@ -1,4 +1,5 @@
 import usuarios.usuario as modelo       #Le voy a nombrar como modelo
+import notas.acciones
 
 class Acciones:
     
@@ -22,15 +23,44 @@ class Acciones:
     def login(self):
         
         print("\nIdentificandote en el sistema")
-        try:
-                
+        try:        
             email = input("Introduzca su email: ")
             password = input("Introduzca su contraseña: ")
             
             usuario = modelo.Usuario('', '', email, password)
             login = usuario.identificar()
             
-            if email == login[3]:
-                print(f"\n Bienvenido {login[1]}, te has registrado en el {login[5]}")
+            if login and email == login[3]:
+                print(f"\n Bienvenido {login[1]}, te has identificado en el {login[5]}")
+                self.proximasAcciones(login)
+        
         except Exception as e:
-            print(f"Login incorrecto, intentalo mas tarde")
+            print("")       
+
+    def proximasAcciones(self, usuario):
+        print("""\n
+        Acciones disponibles \n
+        - Crear nota  (crear)
+        - Mostrar nota (mostrar)
+        - Eliminar nota (eliminar)
+        - Salir (salir)
+        """)
+        
+        
+        accion = input("\nQue quieres hacer ?: ")
+        hazEl= notas.acciones.Acciones()
+
+
+        if accion == "crear":
+            hazEl.crear(usuario)            
+            self.proximasAcciones(usuario)
+        elif accion == "mostrar":
+            hazEl.mostrar(usuario)
+            self.proximasAcciones(usuario)
+        elif accion == "eliminar":
+            hazEl.borrar(usuario)
+            self.proximasAcciones(usuario)
+        elif accion == "salir":
+            print(f"Hasta la proxima {usuario[1]}")
+            exit()
+        
