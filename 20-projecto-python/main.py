@@ -1,25 +1,21 @@
-"""
-Proyecto Python con Mysql
-- Abrir asistente
-- Login o registro
-- Si elegimos registro, creará un usario en la bbdd
-- Si elegimos login, identificará al usuario y nos preguntará
-- Crear nota, mostrar nota, borrarlas
-"""
+# Importar el módulo de acciones desde el paquete usuarios
 from usuarios import acciones
 
+# Imprimir acciones disponibles
 print("""
 Acciones disponibles :
 - registro
 - login
 """)
 
-# Saco la accion del pequete ususarios, del modulo acciones.
-accion = input("\nQue opcion quere hacer: ")
+# Obtener la acción del usuario
+accion = input("\nQué opción desea realizar: ")
+
+# Crear instancia de la clase Acciones
 hazEl = acciones.Acciones()
 
+# Realizar la acción seleccionada por el usuario
 if accion == "registro":
     hazEl.registro()
-    
 elif accion == "login":
     hazEl.login()
