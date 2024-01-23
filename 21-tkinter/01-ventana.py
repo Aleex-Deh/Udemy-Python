@@ -45,5 +45,5 @@ class Progrma:
 #Instanciar el programa
 programa = Progrma()
 programa. cargar()
-programa.addTexto("Holaa, que haces guapo?")
+programa.addTexto("Holaa, que haces ?")
 programa.mostrar()
