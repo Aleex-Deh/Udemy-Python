@@ -15,7 +15,6 @@ texto.config(
 texto.pack(anchor= CENTER)   
 
 
-
 """ En funcion (pruebas) he definido el orden de parámetros, aqui con que ponga (variable="valor") se coloca automatico """
 texto = Label(ventana, text="Basico1")
 texto.config(
@@ -28,7 +27,6 @@ texto.config(
     cursor="arrow"       
     )
 texto.pack(side= TOP, fill=X, expand = YES)     # Medianete el fill relleno todo en x, y con el expand habilito que se exapnda la caja
-
 
 
 texto = Label(ventana, text="Basico2")
@@ -44,7 +42,6 @@ texto.config(
 texto.pack(side=LEFT, fill=X, expand = YES)   
 
 
-
 texto = Label(ventana, text="Basico3")
 texto.config(
     justify= RIGHT,
@@ -56,9 +53,5 @@ texto.config(
     cursor="arrow"       
     )
 texto.pack(side=LEFT, fill=X, expand = YES)    
-
-
-
-
 
 ventana.mainloop()       
