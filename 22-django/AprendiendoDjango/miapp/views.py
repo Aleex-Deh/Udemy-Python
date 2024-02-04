@@ -21,15 +21,10 @@ layout= """
 """
 
 def index(request):
-    return HttpResponse(layout+"""
-            <h1> Inicio </h1>
-        """)
+    return render(request, 'index.html')
 
 def hola_mundo(request):
-    return HttpResponse(layout+"""
-            <h1>Hola mundo con DJango</h1>
-        
-        """)
+    return render(request, 'hola_mundo.html')
 
 def pagina(request):
     
